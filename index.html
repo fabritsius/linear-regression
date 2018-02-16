@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Linear regression is simple</title>
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+	  <script language="javascript" type="text/javascript" src="line.js"></script>
+	  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+	</head>
+	<body>
+	  <h1>Data Analysis is Simple</h1>
+	  <p>Data analysis is the process of evaluating data using analytical and statistical tools to discover useful information and aid in decision making. There are several data analysis methods including data mining, text analytics, business intelligence and data visualization.</p>
+	  <p>Today we hear the word "Data" from every direction, but in most cases it is either BigData or something closely related to Machine Learning (ML). This makes data analysis itself seem more difficult than it is. The truth is, you can achieve a lot without the hard stuff.</p>
+	  <h2>Linear Regression Analysis</h2>
+	  <p>Linear regression is a statistical technique that is used to learn more about the relationship between an independent (predictor) variable and a dependent (criterion) variable. When you have more than one independent variable in your analysis, this is referred to as multiple linear regression. In general, regression allows the researcher to ask the general question “What is the best predictor of…?”</p>
+		<p>For example, let say we were studying the causes of obesity, measured by body mass index (BMI). In particular, we wanted to see if the following variables were significant predictors of a person’s BMI: number of fast food meals eaten per week, number of hours of television watched per week, the number of minutes spent exercising per week, and parents’ BMI. Linear regression would be a good methodology for this analysis.</p>
+		<h2>The Regression Equation</h2>
+		<p>When you are conducting a regression analysis with one independent variable, the regression equation is <span>Y = a + b*X</span> where <span>Y</span> is the dependent variable, <span>X</span> is the independent variable, <span>a</span> is the constant (or intercept), and <span>b</span> is the slope of the regression line. For example, let’s say that GPA is best predicted by the regression equation <span>1 + 0.02*IQ</span>. If a student had an IQ of 130, then, his or her GPA would be 3.6 (1 + 0.02*130 = 3.6).</p>
+		<p>When you are conducting a regression analysis in which you have more than one independent variable, the regression equation is <span>Y = a + b1*X1 + b2*X2 + … +bp*Xp.</span></p>
+		<p>For example, if we wanted to include more variables to our GPA analysis, such as measures of motivation and self-discipline, we would use this equation.</p>
+	  <h2>Assumptions</h2>
+	  <p>There are several assumptions about the data that must be met in order to conduct a linear regression analysis:</p>
+	  <ul>
+	  	<li><strong>Linearity:</strong> It is assumed that the relationship between the independent and dependent variables is linear. Though this assumption can never be fully confirmed, looking at a scatterplot of your variables can help make this determination. If a curvature in the relationship is present, you may consider transforming the variables or explicitly allowing for nonlinear components.</li>
+	  	<li><strong>Normality:</strong> It is assumed that the residuals of your variables are normally distributed. That is, the errors in the prediction of the value of Y (the dependent variable) are distributed in a way that approaches the normal curve. You can look at histograms or normal probability plots to inspect the distribution of your variables and their residual values.</li>
+	  	<li><strong>Independence:</strong> It is assumed that the errors in the prediction of the value of Y are all independent of one another (not correlated).</li>
+	  	<li><strong>Homoscedasticity:</strong> It is assumed that the variance around the regression line is the same for all values of the independent variables.</li>
+	  </ul>
+	  <h2>Let's try?</h2>
+	  <p>The next part is interactive demo. Great for messing around, but can be used for something serious (although wasn't designed for it).</p>
+	  <p>It will be great if you try to understand why we have to meet assumptions from the previous part when we use Linear Regression.</p>
+	  <div id='animation'></div>
+	  <h2>Conclusion</h2>
+	  <p>We stand on the brink of a technological revolution that will fundamentally alter the way we live, work, and relate to one another. In its scale, scope, and complexity, the transformation will be unlike anything humankind has experienced before. We do not yet know just how it will unfold, but one thing is clear: the response to it must be integrated and comprehensive, involving all stakeholders of the global polity, from the public and private sectors to academia and civil society.</p>
+	  <p>The First Industrial Revolution used water and steam power to mechanize production. The Second used electric power to create mass production. The Third used electronics and information technology to automate production. Now a Fourth Industrial Revolution is building on the Third, the digital revolution that has been occurring since the middle of the last century. It is characterized by a fusion of technologies that is blurring the lines between the physical, digital, and biological spheres.</p>
+	  <p>The driving forse of this revolution arguably is data and as in every revolution some people will be left behind. The smallest thing you can do to secure your place in the world of the future is learn a little bit more about data and how it can be used.</p>
+	  <p class="credits">Credits:
+	  	<ul class="credits">
+	  		<li><a href="https://www.youtube.com/watch?v=szXbuO3bVRk" target="_blank">Linear Regression with Ordinary Least Squares</a> by Daniel Shiffman</li>
+	  		<li><a href="https://www.thoughtco.com/linear-regression-analysis-3026704" target="_blank">Linear Regression Analysis</a> by Ashley Crossman</li>
+	  		<li><a href="https://www.weforum.org/agenda/2016/01/the-fourth-industrial-revolution-what-it-means-and-how-to-respond/" target="_blank">The Fourth Industrial Revolution: what it means, how to respond</a> by Klaus Schwab</li>
+	  	</ul></p>
+	  <footer>
+	  	<p>Created by: <a href="https://github.com/fabritsius" target="_blank">Anton Fabritsius</a></p>
+	  	<p>Feb 2018</p>
+	  	<a href="https://github.com/fabritsius/linear-regression" title="GitHub Repository" target="_blank"><img id="git-logo" src="imgs/github.png" alt="GitHub"></a>
+	  </footer>
+	  <script type="text/javascript">
+	  	if ('serviceWorker' in navigator) {
+  			window.addEventListener('load', function() {
+  			  navigator.serviceWorker.register('/linear-regression/sw.js', {scope: '/linear-regression/'}).then(function(registration) {
+  			    // Registration was successful
+  			    console.log(`ServiceWorker registration successful with scope: ${registration.scope}`);
+  			  }, function(err) {
+  			    // registration failed :(
+  			    console.log(`ServiceWorker registration failed: ${err}`);
+  			  });
+  			});
+			}
+	  </script>
+	</body>
+</html>
