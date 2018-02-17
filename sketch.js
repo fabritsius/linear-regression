@@ -8,8 +8,14 @@ let scaleY = 1;
 let message = '';
 
 function setup() {
-	createCanvas(720, 720).parent('animation');
+	const canvasSize = document.getElementById('animation').offsetWidth;
+	createCanvas(canvasSize, canvasSize).parent('animation');
 	medianLine = new Line(1, 0);
+}
+
+function windowResized() {
+	const canvasSize = document.getElementById('animation').offsetWidth;
+	resizeCanvas(canvasSize, canvasSize);
 }
 
 function mousePressed() {
@@ -65,7 +71,7 @@ function drawGraph() {
 		push();
 		noStroke();
 		fill(100);
-		textSize(32);
+		textSize(23);
 		text("[At least 2 points are required]\n\nHold 'H' for help.", width/2, height/2);
 		pop();
 	}
@@ -115,13 +121,13 @@ function showMouseLocation() {
 }
 
 function showMessage(txt) {
-	textSize(32);
+	textSize(23);
 	stroke(255);
 	strokeWeight(1);
 	fill(51);
 	rectMode(CENTER);
 	textAlign(CENTER);
-	rect(width/2, height/2-10, 350, 80);
+	rect(width/2, height/2-10, 300, 70);
 	fill(255);
 	text(txt, width/2, height/2);
 }
@@ -134,8 +140,8 @@ function showHelp() {
 	Hold 'H' for help (this window).`;
 	
 	const border = 1;
-	const sizeX = 600;
-	const sizeY = 280;
+	const sizeX = width*0.8;
+	const sizeY = max(475-sizeX/2, 200);
 
 	push();
 	rectMode(CENTER);
@@ -145,8 +151,8 @@ function showHelp() {
 
 	rect(width/2, height/2, sizeX, sizeY+50);
 	
-	textSize(32);
-	textAlign(CENTER);
+	textSize(23);
+	textAlign(CENTER, TOP);
 	fill(190);
 	text(helpLines, width/2, height/2, sizeX, sizeY);
 	pop();
