@@ -1,4 +1,4 @@
-# linear-regression
+# Linear Regression
 Website with Simple Linear Regression implementation.
 
 Made a script which shows median line for entered points and as always created a [blog post](https://fabritsius.github.io/linear-regression/) for it.
